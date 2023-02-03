@@ -5,8 +5,8 @@
 
 <%-- <c:if test="${!empty loginFailMsg }"> --%>
 <!--     <script type="text/javascript"> -->
-//         const msg = "${loginFailMsg}";
-//         swal(msg);
+<%--         const msg = "${loginFailMsg}"; --%>
+<!--         swal(msg); -->
 <!--     </script> -->
 <%-- </c:if> --%>
 

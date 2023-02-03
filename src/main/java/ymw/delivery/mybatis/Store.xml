@@ -5,11 +5,14 @@
 <mapper namespace="store">
 
 	<select id="storeList" resultType="Store">
-		SELECT * FROM BM_STORE
+		SELECT * 
+		FROM BM_STORE
 	</select>	
 	
 	<select id="storeDetail" resultType="StoreDetail">
-		SELECT * FROM BM_STORE WHERE ID = #{storeId }
+		SELECT * 
+			FROM BM_STORE
+			 WHERE ID = #{storeId }
 	</select>
 	
 	<select id="foodList" resultType="Food">

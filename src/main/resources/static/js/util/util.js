@@ -52,6 +52,7 @@ function lenthCheck(e, length) {
 	
 	return true; 
 }
+
 function openModal(modal) {
 	const size = window.innerWidth;
 	
