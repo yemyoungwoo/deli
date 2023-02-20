@@ -17,7 +17,8 @@ public interface UserDAO {
 	void deleteReview(Map<String, Object> map);
 
 	List<Point> myPoint(long id);
-
+	
+	void modifyInfo(Map<String, Object> map);
 
 //	List<Point> myPoint(long id);
 }

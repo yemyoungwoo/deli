@@ -1,6 +1,5 @@
 package ymw.delivery.controller;
 
-import java.awt.Point;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -20,6 +19,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -27,6 +27,7 @@ import ymw.delivery.dto.Join;
 import ymw.delivery.dto.Review;
 import ymw.delivery.login.LoginService;
 import ymw.delivery.service.UserService;
+import ymw.delivery.util.UserInfoSessionUpdate;
 
 @Controller
 public class UserController {
@@ -36,6 +37,9 @@ public class UserController {
 	
 	@Autowired
 	private BCryptPasswordEncoder pwdEncoder;
+	
+	@Autowired
+	private BCryptPasswordEncoder encodePwd;
 	
 	
 	@GetMapping("/mypage")
@@ -123,5 +127,44 @@ public class UserController {
 	@GetMapping("/user/point")
 	public String point() {
 		return "user/point";
+	}
+	
+	@GetMapping("/user/myInfo")
+	public String myInfo() {
+		return "user/myInfo";
+	}
+	
+	// 내 비밀번호, 닉네임 수정하기
+	@PatchMapping("/user/info")
+	public ResponseEntity<String> modifyInfo(String value, String valueType, String prevPassword, 
+	        @AuthenticationPrincipal LoginService user, HttpSession session) {
+	    // value = 변경할 값
+	    // valueType = password, nickname, phone
+	    String username = user.getUser().getUsername();
+	    String msg = "";
+	    
+	    switch (valueType) {
+	    case "password":
+	        if(!encodePwd.matches(prevPassword, user.getPassword())) {
+	            return new ResponseEntity<String>("현재 비밀번호가 일치하지 않습니다", HttpStatus.OK);
+	        } 
+	        value = encodePwd.encode(value);
+	        msg = "비밀번호가 변경되었습니다";
+	        break;
+	        
+	    case "nickname":
+	        msg = "닉네임이 변경되었습니다";
+	        break;
+	    case "phone":
+	        msg = "전화번호가 변경되었습니다";
+	        session.setMaxInactiveInterval(0);
+	        session.setAttribute("authNum", null);
+	        break;
+	    }
+	    
+	    userService.modifyInfo(username, valueType, value);
+	    UserInfoSessionUpdate.sessionUpdate(value, valueType, user);
+	    
+	    return new ResponseEntity<String>(msg, HttpStatus.OK);
 	}
 }

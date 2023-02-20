@@ -52,4 +52,9 @@ public class UserDAOlmp implements UserDAO {
 	public List<Point> myPoint(long id) {
 		return sql.selectList("user.myPoint", id);
 	}
+	
+	@Override
+	public void modifyInfo(Map<String, Object> map) {
+	    sql.update("user.modifyInfo", map);
+	}
 }

@@ -53,5 +53,14 @@ public class UserServicelmp implements UserService {
 	public List<Point> myPoint(long id) {
 		return userDAO.myPoint(id);
 	}
+	
+	@Override
+	public void modifyInfo(String username, String valueType, String value) {
+	    Map<String, Object> map = new HashMap<>();
+	    map.put("username", username);
+	    map.put("valueType", valueType);
+	    map.put("value", value);
+	    userDAO.modifyInfo(map);
+	}
 
 }
