@@ -9,7 +9,7 @@
 	<div class="wrap"> 
 
 	    <section class="title">
-	        <h1>my 배민</h1> 
+	        <h1>마이페이지</h1> 
 	    </section>
 			
 	    <!-- 콘텐츠 -->
@@ -25,7 +25,7 @@
 	                    
 	                    <c:if test="${!empty SPRING_SECURITY_CONTEXT }">
                             <c:set var="nickname" value="${SPRING_SECURITY_CONTEXT.authentication.principal.user.nickname }" />
-	                        <a href="/user/myInfo"><span class="nickname" data-nickname=${nickname } >${nickname }</span></a>
+	                        <a href="/user/myInfo"><span class="nickname" data-nickname=${nickname } >${nickname }</span>님 환영합니다</a>
 							<button type="button" class="logout">로그아웃</button>
 	                    </c:if>
 		    		</div>
@@ -42,7 +42,7 @@
 		    		
 		    		
 		    		<div>
-		    			<a class="updating" href="/myPage/coupon" onclick="return false;">
+		    			<a class="updating" href="/mypage/coupon" onclick="return false;">
 	               		  	<span class="img_box">
 	                			<img src="/img/icon22.png" alt="쿠폰함">
 	               			</span>
@@ -52,7 +52,7 @@
 		    		
 		    		
 		    		<div>
-		    			<a class="updating" href="/myPage/gift" onclick="return false;">
+		    			<a class="updating" href="/mypage/gift" onclick="return false;">
 	                 		<span class="img_box">
 	                 			<img src="/img/icon33.png" alt="선물함">
 	                 		</span>
@@ -62,7 +62,7 @@
 		    		
 		    		
 		    		<div>
-						<a href="/likes/store">
+						<a href="/likes/store" onclick="return loginCheck();">
 							<span class="img_box">
 								<img src="/img/icon44.png" alt="찜한가게">
 							</span>
@@ -72,8 +72,8 @@
 		    		
 		    		
 		    		<div>
-						<a href="/orderList">
-							<span class="img_box">
+						<a href="/orderList" onclick="return loginCheck();">
+							<span class="img_box" >
 								<img src="/img/icon55.png" alt="주문내역">
 							</span>
 							<span>주문내역</span>

@@ -1,0 +1,43 @@
+
+section.title {
+    width: 100%;
+}
+
+section.title h1 {
+    text-align: center;
+    margin : 30px 0 30px 0 ;
+}
+
+/* ������ */
+
+main {
+	/* min-height: 390px; */
+}
+
+main .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+main .container .grid_box {
+	margin: 0 auto 30px;
+	display: grid;
+	width: 67%;
+	text-align: center;
+	border-right: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+}
+
+main .container .grid_box > div {
+	border: 1px solid #ddd; 
+	border-bottom: none;
+	border-right: none;
+}
+
+main .container .grid_box .login_box {
+    grid-column-end: span 3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px; 
+}

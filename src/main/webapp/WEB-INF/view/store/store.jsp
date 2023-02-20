@@ -31,14 +31,14 @@
 			<input type="hidden" value="${address1 }" class="address1">
 
            <div class="option">
-                <ul>    
-                	<li data-sort="기본순">기본순</li>
-                    <li data-sort="배달 빠른 순">배달 빠른 순</li>
-                    <li data-sort="배달팁 낮은 순">배달팁 낮은 순</li>
-                    <li data-sort="별점 높은 순">별점 높은 순</li>
-                    <li data-sort="리뷰 많은 순">리뷰 많은 순</li>
-                    <li data-sort="최소 주문 금액 순">최소 주문 금액 순</li>
-                </ul> 
+<!--                 <ul>     -->
+<!--                 	<li data-sort="기본순">기본순</li> -->
+<!--                     <li data-sort="배달 빠른 순">배달 빠른 순</li> -->
+<!--                     <li data-sort="배달팁 낮은 순">배달팁 낮은 순</li> -->
+<!--                     <li data-sort="별점 높은 순">별점 높은 순</li> -->
+<!--                     <li data-sort="리뷰 많은 순">리뷰 많은 순</li> -->
+<!--                     <li data-sort="최소 주문 금액 순">최소 주문 금액 순</li> -->
+<!--                 </ul>  -->
            </div>
            
            

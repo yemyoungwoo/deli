@@ -14,7 +14,8 @@ import lombok.ToString;
 @Getter
 @Setter
 public class StoreDetail {
+	@Setter @Getter
 	private Store storeInfo;
 	private List<Food> foodList;
-//	private List<Review> reviewList;
+	private List<Review> reviewList;
 }

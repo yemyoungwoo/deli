@@ -1,4 +1,3 @@
-/*
 $(document).ready(function() {
 	const category = $(".category").data("category");
 	const address1 = $(".address1").val();
@@ -162,9 +161,4 @@ function storeList(result){
 		}
 	return html;	
 }
-
-
-
 });
-
-*/

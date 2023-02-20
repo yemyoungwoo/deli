@@ -7,7 +7,7 @@
         <div>전화번호 : 010-8546-4409</div>
         <div>이메일 : tkddlektks@naver.com</div>
     </div>
-<script src="/js/util/util.js"></script>
 </footer>
 
+<script src="/js/util/util.js"></script>
 

@@ -72,6 +72,7 @@ function overlapCheck(data) {
 	});
 	
 	return isUseable;
+	
 }
 
 
@@ -94,7 +95,6 @@ function pwdCheck() {
 			isSubmit.setpasswordCheck(false);
 		} else {
 			msgBox.text("");
-			console.log("사용가능");
 			isSubmit.setpasswordCheck(true);
 		}
 	}
@@ -220,3 +220,4 @@ $(".phone").focusout(function() {
 		isSubmit.setphoneCheck(true);
 	}
 });
+

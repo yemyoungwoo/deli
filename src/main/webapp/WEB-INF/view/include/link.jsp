@@ -8,7 +8,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>배민</title>
+    <title>달려라배달</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1" >
     <link rel="stylesheet" href="/css/layout/reset.css">
     <link rel="stylesheet" href="/css/layout/header.css">
@@ -31,4 +31,4 @@
     <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
 
     <!-- 파비콘 -->
-    <link href="/img/baemin_favicon.png" rel="shortcut icon" type="image/x-icon">
+    <link href="/img/run.png" rel="shortcut icon" type="image/x-icon">

@@ -3,8 +3,13 @@
 <%@ include file="/WEB-INF/view/include/link.jsp" %>
 <link rel="stylesheet" href="/css/layout/nav.css">
 <link rel="stylesheet" href="/css/home.css">
- 
+ <c:set var="pageTitle" value="MAIN" />
 <%@ include file="/WEB-INF/view/include/header.jsp" %>
+
+<!-- 	<a href="https://www.baeminriders.kr/"> -->
+<!-- 	<img style="float:right;width:15%;" src="https://www.baemin.com/_next/static/images/rider-button-pc@2x.png" alt="라이더 모집 바로가기" draggable="false" class="Imagestyles__Image-sc-1lspwob-0 cBvFeG"> -->
+<!-- 	</a> -->
+ 	
  	<!-- 콘텐츠 -->
     <div class="wrap">
         <main>

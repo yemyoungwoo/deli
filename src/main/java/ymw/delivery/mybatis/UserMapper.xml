@@ -3,28 +3,85 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="user">
-
 	<select id="overlapCheck" resultType="int">
-		SELECT COUNT(*) 
-		FROM BM_USER 
-		WHERE ${valueType } = #{value }
+		SELECT COUNT(*) FROM
+		BM_USER WHERE ${valueType } = #{value }
 	</select>
-	
-<!-- 	<insert id="join"> -->
-<!-- 		INSERT INTO BM_USER ( -->
-<!-- 			ID, -->
-<!-- 			USERNAME, -->
-<!-- 			PASSWORD, -->
-<!-- 			EMAIL, -->
-<!-- 			NICKNAME, -->
-<!-- 			PHONE -->
-<!-- 		) VALUES ( -->
-<!-- 			USER_ID_SEQ.NEXTVAL, -->
-<!-- 			#{username }, -->
-<!-- 			#{password }, -->
-<!-- 			#{email }, -->
-<!-- 			#{nickname }, -->
-<!-- 			#{phone } -->
-<!-- 		) -->
-<!-- 	</insert> -->
+
+
+
+	<insert id="join">
+		INSERT INTO BM_USER (
+		ID,
+		USERNAME,
+		PASSWORD,
+		EMAIL,
+		NICKNAME,
+		PHONE
+		) VALUES (
+		USER_ID_SEQ.NEXTVAL,
+		#{username },
+		#{password },
+		#{email },
+		#{nickname },
+		#{phone }
+		)
+	</insert>
+	<select id="login" resultType="User">
+		SELECT
+		U.ID
+		,U.USERNAME
+		,U.PASSWORD
+		,U.EMAIL
+		,U.NICKNAME
+		,U.PHONE
+		,U.RATING
+		,U.ROLE
+		,P.POINT
+		FROM
+		BM_USER U
+		LEFT
+		JOIN
+		(SELECT USER_ID, SUM(POINT) POINT FROM BM_POINT GROUP BY USER_ID)
+		P
+		ON
+		U.ID = P.USER_ID
+		WHERE U.USERNAME = #{username }
+	</select>
+
+	<!-- <select id="myPoint" resultType="Point"> -->
+	<!-- SELECT -->
+	<!-- USER_ID -->
+	<!-- ,USED_DATE -->
+	<!-- ,INFO -->
+	<!-- ,POINT -->
+	<!-- FROM -->
+	<!-- BM_POINT -->
+	<!-- WHERE -->
+	<!-- USER_ID = #{id } -->
+	<!-- ORDER BY -->
+	<!-- USED_DATE DESC -->
+	<!-- </select> -->
+
+	<select id="myReviewList" resultType="Review">
+		SELECT ORDER_NUM
+		,STORE_ID
+		,REVIEW_CONTENT
+		,BOSS_COMMENT
+		,REGI_DATE
+		,SCORE
+		,REVIEW_IMG
+		,USER_ID
+		FROM BM_REVIEW
+		WHERE USER_ID = #{id }
+		ORDER BY REGI_DATE DESC
+	</select>
+
+
+
+	<delete id="deleteReview">
+		DELETE BM_REVIEW
+		WHERE USER_ID = #{userId }
+		AND ORDER_NUM = #{orderNum }
+	</delete>
 </mapper>
