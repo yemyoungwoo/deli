@@ -19,22 +19,12 @@ import lombok.ToString;
 @Setter
 @ToString
 public class LoginService implements UserDetails, OAuth2User {
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
 	private User user;
-	private String provider; 
 	
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
 		List<GrantedAuthority> roles = new ArrayList<>();
 		roles.add(new GrantedAuthority() {
-			/**
-			 * 
-			 */
-			private static final long serialVersionUID = 1L;
-
 			@Override
 			public String getAuthority() {
 				return user.getRole();

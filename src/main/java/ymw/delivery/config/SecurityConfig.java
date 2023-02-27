@@ -11,6 +11,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import ymw.delivery.login.LoginDetailService;
 import ymw.delivery.login.LoginFail;
 import ymw.delivery.login.LoginSuccess;
+import ymw.delivery.login.OauthUserService;
 
 @EnableWebSecurity
 @Configuration
@@ -24,6 +25,10 @@ public class SecurityConfig  extends WebSecurityConfigurerAdapter {
 	
 	@Autowired
 	private LoginDetailService loginDetailService;
+	
+	@Autowired
+	private OauthUserService oauthUserService;
+	
 	
 	@Bean
 	public BCryptPasswordEncoder encodePwd() {
@@ -55,8 +60,14 @@ public class SecurityConfig  extends WebSecurityConfigurerAdapter {
 			.rememberMeCookieName("rememberMeCookieName")
 			.rememberMeParameter("remember-me")
 			.tokenValiditySeconds(60 * 60 * 24 * 7)
-			.userDetailsService(loginDetailService);
-			
+			.userDetailsService(loginDetailService)
+		.and()
+			.oauth2Login()
+			.loginPage("/")
+			.userInfoEndpoint()
+			.userService(oauthUserService)
+		
+		;
 //			/* 로그아웃 설정 */
 //			.and()
 //			  .logout()

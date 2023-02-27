@@ -40,6 +40,8 @@
             </form>
             
 			<div id="oauth_login">
+			
+<!-- 			Oauth2 라이브러리를 사용해 로그인 할 경우 요청 url은 /oauth2/authorization/로 고정임 -->
 				<div>
 					<a href="/oauth2/authorization/kakao"></a>
 				</div>

@@ -48,7 +48,6 @@ public class UserServicelmp implements UserService {
 		userDAO.deleteReview(map);
 	}
 
-
 	@Override
 	public List<Point> myPoint(long id) {
 		return userDAO.myPoint(id);

@@ -35,6 +35,7 @@ public class OrderController {
 	
 	@Autowired
 	private OrderService orderService;
+	
 	@ResponseBody
 	@PostMapping("/order/payment-cash")
 	public ResponseEntity<String> payment(HttpSession session, OrderInfo orderInfo, long totalPrice, @AuthenticationPrincipal LoginService user) throws IOException {
