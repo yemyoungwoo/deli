@@ -26,6 +26,4 @@ public class OrderInfo {
 	private String phone;
 	private String request;
 	
-//	private String impUid = ""; // 아임포트 결제번호 추가
-	
 }

@@ -187,6 +187,9 @@
 	<%@ include file="/WEB-INF/view/include/footer.jsp" %>
 	<!-- 푸터 -->
 	
+	<!-- iamport.payment.js -->
+<script type="text/javascript" src="https://cdn.iamport.kr/js/iamport.payment-1.1.8.js"></script>
+	
 	<script type="text/javascript" src="/js/order/order.js" ></script>
 </body>
 </html>
