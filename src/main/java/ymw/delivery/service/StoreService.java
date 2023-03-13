@@ -30,4 +30,3 @@ public interface StoreService {
 
 	List<Store> storeSearch(String keyword, int address, Page p);
 }
-

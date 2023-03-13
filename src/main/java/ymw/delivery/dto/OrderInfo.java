@@ -11,7 +11,6 @@ import lombok.ToString;
 @Setter
 @ToString
 public class OrderInfo {
-	
 	private String orderNum;
 	private long storeId;
 	private long userId;
@@ -25,5 +24,4 @@ public class OrderInfo {
 	private int usedPoint;
 	private String phone;
 	private String request;
-	
 }

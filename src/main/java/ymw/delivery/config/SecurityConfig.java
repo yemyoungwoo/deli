@@ -66,7 +66,6 @@ public class SecurityConfig  extends WebSecurityConfigurerAdapter {
 			.loginPage("/")
 			.userInfoEndpoint()
 			.userService(oauthUserService)
-		
 		;
 //			/* 로그아웃 설정 */
 //			.and()

@@ -58,6 +58,4 @@ public class Page {
 	        totalPage = listCount / view + 1;
 	    }
 	}
-	
-	
 }

@@ -26,8 +26,6 @@ public class CookieManager {
 		return null;
 	}
 	
-	
-	
 	public void likes(long storeId) throws Exception  {
 		final String LIKES_LIST = "LIKES_LIST";
 		String cookie = findCookie(LIKES_LIST);

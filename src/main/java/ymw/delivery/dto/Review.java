@@ -18,7 +18,6 @@ public class Review {
 	private Date regiDate;
 	private float score;
 	private String reviewImg;
-
 	private long userId;
 	private String username;
 	private String nickname;

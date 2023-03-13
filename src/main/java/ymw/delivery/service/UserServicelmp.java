@@ -23,7 +23,6 @@ public class UserServicelmp implements UserService {
 		userDAO.join(join);
 	}
 
-
 	@Override
 	public int overlapCheck(String value, String valueType) {
 		return userDAO.overlapCheck(value, valueType);
@@ -61,5 +60,4 @@ public class UserServicelmp implements UserService {
 	    map.put("value", value);
 	    userDAO.modifyInfo(map);
 	}
-
 }

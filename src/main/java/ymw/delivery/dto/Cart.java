@@ -17,6 +17,7 @@ public class Cart {
 	private int amount;
 	private int totalPrice;
 
+	
 	private String[] optionName;
 	private int[] optionPrice;
 	private long[] optionId;

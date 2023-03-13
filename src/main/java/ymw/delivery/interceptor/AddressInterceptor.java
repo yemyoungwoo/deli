@@ -35,5 +35,4 @@ public class AddressInterceptor implements HandlerInterceptor {
 		}
 		return true;
 	}
-
 }

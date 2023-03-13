@@ -19,7 +19,6 @@ public class Page {
 	
 	private int totalPage; // 목록 총 갯수 페이지
 	
-	
 	public Page() {
 		this(1);
 	}

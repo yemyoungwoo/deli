@@ -13,8 +13,6 @@ import ymw.delivery.dto.FoodOption;
 import ymw.delivery.dto.Review;
 import ymw.delivery.dto.Store;
 
-
-
 @Repository
 public class StoreDAOImp implements StoreDAO {
 	@Autowired

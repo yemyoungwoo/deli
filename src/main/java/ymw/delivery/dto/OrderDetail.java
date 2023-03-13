@@ -13,6 +13,7 @@ public class OrderDetail {
 	private String orderNum;
 	private String foodInfoJSON;
 }
+
 //	private int storeAddress1;
 //	private String storeAddress2;
 //	private String storeAddress3;

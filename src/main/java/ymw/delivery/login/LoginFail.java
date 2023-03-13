@@ -24,5 +24,4 @@ public class LoginFail implements AuthenticationFailureHandler {
 		}
 		request.getRequestDispatcher("/WEB-INF/view/user/login.jsp").forward(request, response);
 	}
-
 }

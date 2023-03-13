@@ -24,7 +24,6 @@ public class StoreServiceImp implements StoreService {
 //		return storeList(category, address, "주문접수 대기 중", 1);
 //	}
 
-
 	@Override
 	public List<Store> storeList(int category, int address) {
 		Map<String, Object> map = new HashMap<>();

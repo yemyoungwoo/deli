@@ -136,7 +136,6 @@ public class CartController {
 	    
 	    cartList.setCartTotal(total + foodPrice);
 	    cart.set(cartNum, prevCart);
-	    
 	    return cartList;
 	}
 }

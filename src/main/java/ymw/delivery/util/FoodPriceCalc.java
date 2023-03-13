@@ -13,7 +13,6 @@ public class FoodPriceCalc {
 				optionPriceTotal += optionPrice[i];
 			}
 		}
-		
 		int foodPrice = cart.getFoodPrice() * cart.getAmount();
 		
 		return foodPrice + (optionPriceTotal * cart.getAmount());

@@ -8,8 +8,6 @@
 		BM_USER WHERE ${valueType } = #{value }
 	</select>
 
-
-
 	<insert id="join">
 		INSERT INTO BM_USER (
 		ID,

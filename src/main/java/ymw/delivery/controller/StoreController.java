@@ -150,7 +150,6 @@ public class StoreController {
 
 		return userId;
 	}
-	
 	// 찜한 가게 목록
 	@GetMapping("/likes/store")
 	public String likes(Model model, @AuthenticationPrincipal LoginService user) {

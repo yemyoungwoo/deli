@@ -16,6 +16,5 @@ public class CartList {
 	private String storeName;
 	int cartTotal;
 	private int deleveryTip;
-
 	List<Cart> cart;
 }

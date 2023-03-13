@@ -41,7 +41,6 @@ public class UserController {
 	@Autowired
 	private BCryptPasswordEncoder encodePwd;
 	
-	
 	@GetMapping("/mypage")
 	public String myPage() {
 		return "user/mypage";

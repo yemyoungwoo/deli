@@ -10,7 +10,6 @@ import lombok.ToString;
 @Setter
 @ToString
 public class OrderList {
-
 	private String orderNum;
 	private long storeId;
 	private long userId;

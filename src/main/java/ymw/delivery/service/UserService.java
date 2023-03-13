@@ -19,5 +19,4 @@ public interface UserService {
 	List<Point> myPoint(long id);
 
 	void modifyInfo(String username, String valueType, String value);
-
 }

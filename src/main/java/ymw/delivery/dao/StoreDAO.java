@@ -8,8 +8,6 @@ import ymw.delivery.dto.FoodOption;
 import ymw.delivery.dto.Review;
 import ymw.delivery.dto.Store;
 
-
-
 public interface StoreDAO {
 
 	List<Store> storeList(Map<String, Object> map);
