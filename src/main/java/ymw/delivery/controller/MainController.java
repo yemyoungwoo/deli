@@ -24,14 +24,16 @@ public class MainController {
     }
     @ResponseBody
 	@PostMapping("/addressModify")
-	public void addressModify(String address1, String address2, HttpServletResponse response, HttpSession session)
+	public void addressModify(String address1, String address2, String address3, HttpServletResponse response, HttpSession session)
 			throws UnsupportedEncodingException {
 //		address1 = 우편번호
 //		address2 = 주소
+//		address3 = 상세주소
 
 		System.out.println("address1 =" + address1);
 		System.out.println("address2 =" + address2);
-
+		System.out.println("address3 =" + address3);
+		
 		String address = "{\"address1\" : \"" + address1 + "\",\"address2\" : \"" + address2 + "\"}"; 
 		
 		// 쿠키에 JSON으로 저장
