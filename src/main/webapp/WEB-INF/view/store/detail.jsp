@@ -2,6 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ include file="/WEB-INF/view/include/link.jsp"%>
 
+
 <script type="text/javascript"
 	src="//dapi.kakao.com/v2/maps/sdk.js?appkey=dd2ab2afa0a56cadfcc1579a01196ffd&libraries=services,clusterer,drawing"></script>
 
