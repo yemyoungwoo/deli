@@ -351,6 +351,7 @@
 	<input type="hidden" value="${BMaddress.address2 }" id="delevery_address">
 
 
+
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=dd2ab2afa0a56cadfcc1579a01196ffd"></script>
 	<script>
     $(document).ready(function(){
